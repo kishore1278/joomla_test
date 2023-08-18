@@ -9,23 +9,31 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
 
-
     steps:
-    - name: Install PHP and dependencies
-      run: |
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install PHP and dependencies
+        run: |
           sudo apt-get update
           sudo apt-get install php-cli php-mbstring php-xml unzip -y
 
-    - name: Install Joomla
-      run: |
+      - name: Install Joomla
+        run: |
           wget https://downloads.joomla.org/cms/joomla4/4-0-0/Joomla_4-0-0-Stable-Full_Package.zip
           unzip Joomla_4-0-0-Stable-Full_Package.zip -d joomla_test
+
+      - name: Initialize Git repository
+        run: |
+          cd joomla_test
           git init
+          git config user.name "kishore1278"
+          git config user.email "yuvadonadi17@gmail.com"
           git add .
-          git remote origin add https://github.com/kishore1278/joomla_test.git
-          git pull
+          git commit -m "Initial commit"
+
+      - name: Push to GitHub
+        run: |
+          cd joomla_test
+          git remote add origin https://github.com/kishore1278/joomla_test.git
           git push -u origin main
-    
-       
-          
-       
