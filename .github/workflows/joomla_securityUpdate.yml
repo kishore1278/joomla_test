@@ -28,8 +28,6 @@ jobs:
           cd joomla_test
           git checkout -b master
           git init
-          git config user.name "kishore1278"
-          git config user.email "yuvadonadi17@gmail.com"
           git add .
           git commit -m "Initial commit"
 
@@ -37,5 +35,4 @@ jobs:
         run: |
           cd joomla_test
           git remote add origin https://github.com/kishore1278/joomla_test.git
-        
-          git push -u origin master
+          git push -u origin main
