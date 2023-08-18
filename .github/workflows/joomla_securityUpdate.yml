@@ -3,7 +3,7 @@ name: Deploy to EC2
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   deploy:
@@ -26,7 +26,7 @@ jobs:
       - name: Initialize Git repository
         run: |
           cd joomla_test
-          git checkout -b main
+          git checkout -b master
           git init
           git config user.name "kishore1278"
           git config user.email "yuvadonadi17@gmail.com"
@@ -38,4 +38,4 @@ jobs:
           cd joomla_test
           git remote add origin https://github.com/kishore1278/joomla_test.git
           git pull
-          git push -u origin main
+          git push -u origin master
