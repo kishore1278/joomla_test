@@ -26,6 +26,7 @@ jobs:
       - name: Initialize Git repository
         run: |
           cd joomla_test
+          git checkout -b main
           git init
           git config user.name "kishore1278"
           git config user.email "yuvadonadi17@gmail.com"
