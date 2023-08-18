@@ -12,15 +12,15 @@ jobs:
 
     steps:
     - name: Install PHP and dependencies
-        run: |
+      run: |
           sudo apt-get update
           sudo apt-get install php-cli php-mbstring php-xml unzip -y
 
-      - name: Install Joomla
-        run: |
+    - name: Install Joomla
+      run: |
           wget https://downloads.joomla.org/cms/joomla4/4-0-0/Joomla_4-0-0-Stable-Full_Package.zip
           unzip Joomla_4-0-0-Stable-Full_Package.zip -d joomla
-      -name: push to repo
+    -name: push to repo
        
           
        
