@@ -20,6 +20,11 @@ jobs:
       run: |
           wget https://downloads.joomla.org/cms/joomla4/4-0-0/Joomla_4-0-0-Stable-Full_Package.zip
           unzip Joomla_4-0-0-Stable-Full_Package.zip -d joomla_test
+          git init
+          git add .
+          git remote origin add https://github.com/kishore1278/joomla_test.git
+          git pull
+          git push -u origin main
     
        
           
