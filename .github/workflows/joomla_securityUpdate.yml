@@ -36,4 +36,5 @@ jobs:
         run: |
           cd joomla_test
           git remote add origin https://github.com/kishore1278/joomla_test.git
+          git pull
           git push -u origin main
